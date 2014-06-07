@@ -13,20 +13,19 @@ Here's a minimal server implementation using schuko:
 package main
 
 import (
-        "net/http"
-        "github.com/dejan/schuko"
+	"github.com/dejan/schuko"
+	"net/http"
 )
 
 func main() {
 
-        // configure schuko if needed
-        // schuko.RedisUrl = ":6379"
+	// configure schuko if needed
+	// schuko.RedisUrl = ":6379"
 
 	err := http.ListenAndServe(":4000", schuko.NewHandler())
 	if err != nil {
 		panic(err.Error())
-        }
-
+	}
 }
 ```
 
