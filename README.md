@@ -33,13 +33,14 @@ func main() {
 Subscribe
 ---------
 
-Subscribe with plain old WebSocket API.
+Subscribe with plain old WebSocket API. 
 
 ```JavaScript
-var ws = new WebSocket("ws://localhost:4000/coolchannel")
+var ws = new WebSocket("ws://localhost:4000/hacienda")
 ws.onmessage = function(e) { console.log(e.data); }
 ```
 
+WebSocket path (in this case "/hacienda") is the channel you're subscribing to.
 
 Publish
 -------
@@ -48,6 +49,6 @@ Publish messages through Redis.
 
 ```
 $ redis-cli 
-127.0.0.1:6379> publish /coolchannel "Hey Gringo!"
+127.0.0.1:6379> publish /hacienda "Hey Gringo!"
 ```
 
