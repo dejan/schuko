@@ -1,7 +1,7 @@
 package schuko
 
 import (
-	"code.google.com/p/go.net/websocket"
+        "github.com/hashicorp/go.net/websocket"
 	"github.com/garyburd/redigo/redis"
 	"github.com/jcelliott/lumber"
 )
